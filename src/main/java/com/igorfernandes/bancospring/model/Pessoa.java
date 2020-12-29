@@ -16,15 +16,15 @@ public class Pessoa {
     private Long id;
 
     @Column(length = 60)
-    private String nome;
+    private final String nome;
 
-    private String email;
+    private final String email;
 
     @Column(length = 11)
-    private String cpf;
+    private final String cpf;
 
     @Column(name = "data_nascimento")
-    private LocalDate dataNascimento;
+    private final LocalDate dataNascimento;
 
     public Pessoa(String nome, String email, String cpf, LocalDate dataNascimento) {
         this.nome = nome;
