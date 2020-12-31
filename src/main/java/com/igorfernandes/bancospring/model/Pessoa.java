@@ -9,6 +9,12 @@ import java.time.LocalDate;
 @Entity
 @Getter
 @NoArgsConstructor
+//@Table(
+//        indexes = {
+//                @Index(name = "idx_email", columnList = "email", unique = true),
+//                @Index(name = "idx_cpf", columnList = "cpf", unique = true)
+//        }
+//)
 public class Pessoa {
 
     @Id
@@ -16,15 +22,16 @@ public class Pessoa {
     private Long id;
 
     @Column(length = 60)
-    private final String nome;
+    private String nome;
 
-    private final String email;
+    @Column(unique = true)
+    private String email;
 
-    @Column(length = 11)
-    private final String cpf;
+    @Column(length = 11, unique = true)
+    private String cpf;
 
     @Column(name = "data_nascimento")
-    private final LocalDate dataNascimento;
+    private LocalDate dataNascimento;
 
     public Pessoa(String nome, String email, String cpf, LocalDate dataNascimento) {
         this.nome = nome;
