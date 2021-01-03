@@ -21,9 +21,9 @@ public class PessoaController {
     private PessoaService pessoaService;
 
     @PostMapping
-    public ResponseEntity<String> salvar(@Valid @RequestBody PessoaDTO pessoaDTO) {
-        pessoaService.save(pessoaDTO.transformaParaObjeto());
-        return new ResponseEntity<>("Usuário criado!", HttpStatus.CREATED);
+    public ResponseEntity<PessoaRespostaDTO> salvar(@Valid @RequestBody PessoaDTO pessoaDTO) {
+        Pessoa p = pessoaService.save(pessoaDTO.transformaParaObjeto());
+        return new ResponseEntity<>(PessoaRespostaDTO.transformaEmDTO(p), HttpStatus.CREATED);
     }
 
     @ResponseStatus(HttpStatus.OK)

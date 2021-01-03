@@ -1,5 +1,6 @@
 package com.igorfernandes.bancospring.dto;
 
+import br.com.caelum.stella.bean.validation.CPF;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.igorfernandes.bancospring.exception.UniqueCPF;
 import com.igorfernandes.bancospring.exception.UniqueEmail;
@@ -14,7 +15,7 @@ import java.time.LocalDate;
 public class PessoaDTO {
 
     @NotBlank(message = "O nome não pode ser vazio!")
-    @Size(min = 3, max = 40, message = "o nome precisa ter entre {min} e {max} caracteres!")
+    @Size(min = 3, max = 40, message = "O nome precisa ter entre {min} e {max} caracteres!")
     private String nome;
 
     @UniqueEmail
@@ -23,6 +24,7 @@ public class PessoaDTO {
     private String email;
 
     @UniqueCPF
+    @CPF(message = "CPF Inválido!", ignoreRepeated = true)
     @NotBlank(message = "CPF não pode ser vazio!")
     private String cpf;
 
