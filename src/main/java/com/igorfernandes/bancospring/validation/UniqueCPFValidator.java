@@ -1,4 +1,4 @@
-package com.igorfernandes.bancospring.exception;
+package com.igorfernandes.bancospring.validation;
 
 import com.igorfernandes.bancospring.service.PessoaService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -6,13 +6,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
-public class UniqueEmailValidator implements ConstraintValidator<UniqueEmail, String> {
+public class UniqueCPFValidator implements ConstraintValidator<UniqueCPF, String>{
 
     @Autowired
     private PessoaService pessoaService;
 
     @Override
-    public boolean isValid(String email, ConstraintValidatorContext constraintValidatorContext) {
-        return !pessoaService.existsByEmail(email);
+    public boolean isValid(String cpf, ConstraintValidatorContext constraintValidatorContext) {
+        return !pessoaService.existsByCpf(cpf);
     }
 }

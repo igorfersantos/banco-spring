@@ -2,14 +2,15 @@ package com.igorfernandes.bancospring.dto;
 
 import br.com.caelum.stella.bean.validation.CPF;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
-import com.igorfernandes.bancospring.exception.UniqueCPF;
-import com.igorfernandes.bancospring.exception.UniqueEmail;
+import com.igorfernandes.bancospring.validation.UniqueCPF;
+import com.igorfernandes.bancospring.validation.UniqueEmail;
 import com.igorfernandes.bancospring.model.Pessoa;
 import lombok.Value;
 
 import javax.validation.constraints.*;
 import java.time.LocalDate;
 
+// Ordem de exibição dos campos
 @JsonPropertyOrder({"nome", "email", "cpf", "dataNascimento"})
 @Value // Objeto imutável
 public class PessoaDTO {

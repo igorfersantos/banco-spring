@@ -1,11 +1,9 @@
 package com.igorfernandes.bancospring.controller;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.igorfernandes.bancospring.dto.PessoaDTO;
 import com.igorfernandes.bancospring.repository.PessoaRepository;
 import com.igorfernandes.bancospring.service.PessoaService;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
@@ -22,9 +20,9 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 
-@SpringBootTest
-@AutoConfigureMockMvc
-@TestInstance(TestInstance.Lifecycle.PER_CLASS)
+@SpringBootTest // Auto configuração das classes e configurações da aplicação
+@AutoConfigureMockMvc // Auto configura o Spring MockMvc
+@TestInstance(TestInstance.Lifecycle.PER_CLASS) // Cria uma instância por teste
 class PessoaControllerTest {
     @Autowired
     private MockMvc mockMvc;
@@ -97,18 +95,17 @@ class PessoaControllerTest {
     }
 
     //  CPF
-    /*
-        Nota: Como setamos o ignoreRepeated = true na classe PessoaDTO
-        nós podemos registrar CPFs com números repetidos como "11111111111".
-    */
+    // Nota: Como setamos o ignoreRepeated = true na classe PessoaDTO
+    // nós podemos registrar CPFs com números repetidos como "11111111111".
+
     @Test
-    void salvarCPFInvalido() throws Exception{
+    void salvarCPFInvalido() throws Exception {
         // DRY - pessoa válida no banco
         salvar();
 
         testarCPF(null, "CPF não pode ser vazio!");
-        testarCPF("3", "CPF Inválido!");
-        testarCPF("34274324832487387", "CPF Inválido!");
+        testarCPF("3", "CPF Inválido!"); // Caelum Stella
+        testarCPF("34274324832487387", "CPF Inválido!"); // Caelum Stella
         testarCPF("11111111111", "CPF já cadastrado!");
     }
 

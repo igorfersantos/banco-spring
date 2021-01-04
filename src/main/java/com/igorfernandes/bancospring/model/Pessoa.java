@@ -9,12 +9,6 @@ import java.time.LocalDate;
 @Entity
 @Getter
 @NoArgsConstructor
-//@Table(
-//        indexes = {
-//                @Index(name = "idx_email", columnList = "email", unique = true),
-//                @Index(name = "idx_cpf", columnList = "cpf", unique = true)
-//        }
-//)
 public class Pessoa {
 
     @Id
