@@ -1,6 +1,6 @@
 # Banco Spring
 
-Feito com o intuíto de desenvolver um tutorial de cadastro de pessoa simples com Spring e algumas dependências como:
+Feito com o intuíto de desenvolver um tutorial de cadastro de pessoa em banco simples com Spring e algumas dependências como:
 * Spring Boot
 * Lombok (Redução de código boilerplate)
 * Caellum Stella - Validação de CPF
