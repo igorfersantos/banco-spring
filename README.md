@@ -8,6 +8,15 @@ Feito com o intuíto de desenvolver um tutorial de cadastro de pessoa simples co
 * JPA/ Spring Data JPA
 * Spring DevTools
 * JUnit
+
+# Tutorial
+Acompanha um mini-tutorial (ainda vou desenvolver mais) sobre sua construção.
+
+# TODOs:
+- [ ] Refatoração aplicando melhor os conceitos e práticas de DDD ou CDD
+- [ ] Deploy e Integração contínua com TravisCI, Heroku/AWS
+
+
 # Contribuições
 
 Contribuições são bem-vindas desde que seja muito bem explicada no issue/pull request, pois o intuito desse repositório é aprender e reproduzir o aprendizado com Spring
