@@ -15,6 +15,7 @@ Acompanha um mini-tutorial (ainda vou desenvolver mais) sobre sua construção.
 # TODOs:
 - [ ] Refatoração aplicando melhor os conceitos e práticas de DDD ou CDD
 - [ ] Deploy e Integração contínua com TravisCI, Heroku/AWS
+- [ ] Transformar o application.properties para YAML
 
 
 # Contribuições
