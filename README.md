@@ -20,4 +20,4 @@ Acompanha um mini-tutorial (ainda vou desenvolver mais) sobre sua construção.
 
 # Contribuições
 
-Contribuições são bem-vindas desde que seja muito bem explicada no issue/pull request, pois o intuito desse repositório é aprender e reproduzir o aprendizado com Spring e outros conhecimentos adquiridos das bases da programação e princípios sólidos do mesmo
+Contribuições são bem-vindas desde que seja muito bem explicada no issue/pull request, pois o intuito desse repositório é aprender e reproduzir o aprendizado com Spring e outros conhecimentos adquiridos das bases da programação e princípios SOLID.
