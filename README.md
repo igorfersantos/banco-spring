@@ -14,7 +14,7 @@ Acompanha um mini-tutorial (ainda vou desenvolver mais) sobre sua construção.
 
 # TODOs:
 - [ ] Refatoração aplicando melhor os conceitos e práticas de TDD
-- [ ] Deploy e Integração contínua com TravisCI, Heroku/AWS
+- [ ] Pipeline CI/CD com Github Actions e Heroku
 - [ ] Transformar o application.properties para YAML
 
 
