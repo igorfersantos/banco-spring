@@ -13,7 +13,7 @@ Feito com o intuíto de desenvolver um tutorial de cadastro de pessoa em banco s
 Acompanha um mini-tutorial (ainda vou desenvolver mais) sobre sua construção.
 
 # TODOs:
-- [ ] Refatoração aplicando melhor os conceitos e práticas de DDD ou CDD
+- [ ] Refatoração aplicando melhor os conceitos e práticas de TDD
 - [ ] Deploy e Integração contínua com TravisCI, Heroku/AWS
 - [ ] Transformar o application.properties para YAML
 
